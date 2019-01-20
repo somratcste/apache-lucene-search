@@ -12,4 +12,3 @@ javac Indexer.java
 
 # Compile and create search
 javac Searcher.java
-java Searcher "superman"
