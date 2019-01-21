@@ -27,7 +27,7 @@ public class Indexer {
         doc.add(new TextField("item_id", id, Store.YES));
         doc.add(new TextField("item_name", name, Store.YES));
         doc.add(new TextField("category_name", categoryName, Store.YES));
-        doc.add(new TextField("current_price", currentPrice, Store.YES));
+//        doc.add(new TextField("current_price", currentPrice, Store.YES));
         doc.add(new TextField("item_description", description, Store.YES));
 
         try {
@@ -50,9 +50,9 @@ public class Indexer {
                 String id = rs.getString("item.item_id");
                 String name = rs.getString("item.item_name");
                 String categoryName = rs.getString("has_category.category_name");
-                String currentPrice = rs.getString("auction.current_price");
+//                String currentPrice = rs.getString("auction.current_price");
                 String description = rs.getString("item.description");
-                itemInfoLinkedList.add(new ItemInfo(id, name, categoryName, currentPrice, description));
+                itemInfoLinkedList.add(new ItemInfo(id, name, categoryName , description));
             }
 
         } catch (SQLException e) {

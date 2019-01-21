@@ -13,6 +13,13 @@ public class ItemInfo {
         this.description = description;
     }
 
+    public ItemInfo(String id, String name, String categoryName, String description) {
+        this.id = id;
+        this.name = name;
+        this.categoryName = categoryName;
+        this.description = description;
+    }
+
     public String getId() {
         return id;
     }
