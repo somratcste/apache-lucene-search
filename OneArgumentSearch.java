@@ -31,10 +31,7 @@ public class OneArgumentSearch {
 
     @Override
     public String toString() {
-        return itemID +
-                ", " + itemName +
-                ", score: " + score +
-                ", price: " + price;
+        return itemID + ", " + itemName + ", score: " + score + ", price: " + price;
     }
 
     @Override

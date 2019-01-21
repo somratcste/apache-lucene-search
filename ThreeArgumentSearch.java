@@ -37,11 +37,7 @@ public class ThreeArgumentSearch {
 
     @Override
     public String toString() {
-        return itemID +
-                ", " + itemName +
-                ", score: " + score +
-                ", dist: " + dist +
-                ", price: " + price;
+        return itemID + ", " + itemName + ", score: " + score + ", dist: " + dist + ", price: " + price;
     }
 
     @Override

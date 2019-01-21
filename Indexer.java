@@ -39,9 +39,9 @@ public class Indexer {
 
 	public static void queryToGetItemInfo(Connection connection) throws Exception {
         Statement statement = null;
-        String query = "SELECT distinct item.item_id, item.item_name, has_category.category_name, auction.current_price, item.description\n" +
-                "FROM item\n" +
-                "INNER JOIN auction ON item.item_id = auction.item_id\n" +
+        String query = "SELECT distinct item.item_id, item.item_name, has_category.category_name, auction.current_price, item.description " +
+                "FROM item " +
+                "INNER JOIN auction ON item.item_id = auction.item_id " +
                 "INNER JOIN has_category ON item.item_id = has_category.item_id;";
         try {
             statement = connection.createStatement();
