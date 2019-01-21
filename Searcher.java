@@ -43,13 +43,11 @@ public class Searcher {
 
 	public static void getDistanceFromGeoTable(Connection connection) throws SQLException {
 		Statement statement = null;
-		String query = "SELECT \n" +
-				"    itemID,\n" +
+		String query = "SELECT itemID,\n" +
 				"    (6371 * ACOS(COS(RADIANS(" + latitude + ")) * COS(RADIANS(X(location))) \n" +
 				"    * COS(RADIANS(Y(location)) - RADIANS(" + longitude + ")) + SIN(RADIANS(" + latitude + "))\n" +
 				"    * SIN(RADIANS(X(location))))) AS distance\n" +
-				"FROM geo\n" +
-				"WHERE MBRContains\n" +
+				"FROM geo WHERE MBRContains\n" +
 				"    (\n" +
 				"    LineString\n" +
 				"        (\n" +

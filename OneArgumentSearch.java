@@ -32,7 +32,7 @@ public class OneArgumentSearch {
     @Override
     public String toString() {
         return itemID +
-                ", " + itemName + '\'' +
+                ", " + itemName +
                 ", score: " + score +
                 ", price: " + price;
     }
